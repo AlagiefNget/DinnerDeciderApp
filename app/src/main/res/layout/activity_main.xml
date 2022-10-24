@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,66 +9,90 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/image"
-        android:layout_width="wrap_content"
+        android:layout_width="129dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_gravity="center"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginEnd="120dp"
+        android:contentDescription="TODO"
         android:src="@drawable/dd_logo"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="TODO" />
-
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/foodName"
+        android:id="@+id/choice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="89dp"
+        android:gravity="center"
         android:text="Hamburger"
         android:textAlignment="center"
+        android:textSize="25sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="368dp"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:layout_marginTop="10sp"/>
-
+        tools:layout_editor_absoluteY="368dp" />
 
     <EditText
         android:id="@+id/newFood"
-        android:layout_width="300sp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
-        android:hint="Add new food"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        android:layout_marginTop="150sp"
-        android:gravity="center"
+        android:layout_below="@+id/choice"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_gravity="center"
-        android:text=""/>
-
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="55dp"
+        android:gravity="center"
+        android:hint="add new food"
+        android:text=""
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/addFood"
-        android:layout_width="300sp"
-        android:layout_height="wrap_content"
+        android:layout_width="283dp"
+        android:layout_height="46dp"
+        android:layout_below="@+id/newFood"
+        android:layout_alignStart="@+id/decide"
+        android:layout_alignEnd="@+id/decide"
+        android:layout_gravity="center"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="47dp"
+        android:gravity="center"
+        android:onClick="addFood"
         android:text="Add food"
         app:iconGravity="end"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="479dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:onClick="addFood"/>
+        tools:layout_editor_absoluteY="479dp" />
 
     <Button
         android:id="@+id/decide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="17dp"
         android:onClick="decide"
-        android:text="Make A Choice"
+        android:text="Decide!"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="665dp"
-        android:layout_marginTop="250dp"/>
+        tools:layout_editor_absoluteY="665dp" />
 
-</LinearLayout>
+</RelativeLayout>
